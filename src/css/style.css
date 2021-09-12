@@ -1,67 +1,30 @@
-body {
-    color: #333;
-}
+    body {
+      font-family: 'Rampart One', cursive;
+    }
 
-.hidden {
-    display: none;
-}
+    .image {
+      display: flex;
+      width: 90%;
+      margin: auto;
+    }
 
-.input {
-    display: inline-block;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #495057;
-    border: 1px solid #ced4da;
-    border-radius: .25rem;
-}
+    .game-table {
+      border: 1px solid yellow;
+    }
 
-.btn {
-    display: inline-block;
-    text-align: center;
-    vertical-align: middle;
-    user-select: none;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: .25rem;
-    border: 1px solid #ced4da;
-}
+    .cell {
+      background-color: green;
+      border: 1px solid black;
+      border-radius: 2%;
+      width: 100px;
+      height: 100px;
+    }
 
-.contact-list {
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    padding-left: 0;
-    margin-bottom: 0;
-    max-width: 500px;;
-}
+    .cursor {
+      cursor: auto;
+      cursor: url('../img/Cursor-PNG-Photo-cf239fcf.png'), auto;
+    }
 
-
-.contact-list-item:first-child, .contact-list-item:last-child {
-    border-top-left-radius: .25rem;
-    border-top-right-radius: .25rem;
-}
-
-.contact-list-item {
-    position: relative;
-    display: block;
-    padding: .75rem 1.25rem;
-    margin-bottom: -1px;
-    background-color: #fff;
-    border: 1px solid #ced4da;
-}
-
-.contact-main {
-    display: flex;
-    align-items: center;
-}
-
-.contact-list-item-img {
-    border-radius: 50%;
-    margin-right: 1rem;
-}
-
-.contact-list-item-name, .contact-list-item-phone, .contact-list-item-action {
-    margin-right: 1rem;
-}
+    .hide {
+      display: none;
+    }
