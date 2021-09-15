@@ -9,7 +9,7 @@ const minusPoints = document.querySelector('.minus-points');
 const plusPoints = document.querySelector('.plus-points');
 
 addField(4);
-let startGame = setInterval(() => addImage(4), 1000);
+let startGame = setInterval(() => addImage(), 1000);
 container.addEventListener('click', crash);
 document.querySelector('.start-game').addEventListener('click', newGame);
 
@@ -51,13 +51,13 @@ function addImage() {
   Array.from(document.querySelector('td')).forEach((e) => {
     e.addEventListener('mouseenter', mouseListener);
   });
-  const id = Math.ceil(Math.random() * (4 ** 2));
-  if (!document.getElementById(id).firstChild) {
+  const index = Math.floor(Math.random() * (4 ** 2));
+  if (!document.getElementById(index).firstChild) {
     if (document.querySelector('.image')) minusPoints.textContent++;
-    if (minusPoints.textCotent >= 5) {
+    if (minusPoints.textContent >= 5 || plusPoints.textContent >= 5) {
       endGame();
     }
-    const elem = document.getElementById(id);
+    const elem = document.getElementById(index);
     document.querySelectorAll('.image').forEach((el) => el.remove());
     const image = document.createElement('img');
     image.src = goblin;
@@ -71,12 +71,12 @@ function addImage() {
 
 function newGame() {
   clearInterval(startGame);
-  document.querySelector('.image').forEach((elem) => elem.remove());
+  document.querySelectorAll('.image').forEach((elem) => elem.remove());
   container.addEventListener('click', crash);
   document.querySelector('.end-game').classList.add('hide');
   plusPoints.textContent = 0;
   minusPoints.textContent = 0;
-  startGame = setInterval(addField, 1000);
+  startGame = setInterval(() => addImage(), 1000);
 }
 
 function endGame() {
