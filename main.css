@@ -1,0 +1,31 @@
+    body {
+      font-family: 'Rampart One', cursive;
+    }
+
+    .image {
+      display: flex;
+      width: 90%;
+      margin: auto;
+    }
+
+    .game-table {
+      border: 1px solid yellow;
+    }
+
+    .cell {
+      background-color: green;
+      border: 1px solid black;
+      border-radius: 2%;
+      width: 100px;
+      height: 100px;
+    }
+
+    .cursor {
+      cursor: auto;
+      cursor: url(3897646378b572764da3.png), auto;
+    }
+
+    .hide {
+      display: none;
+    }
+
